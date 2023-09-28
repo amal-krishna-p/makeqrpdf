@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block content%}
+<style>
+.i{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+</style>
+<button onclick="location.href='logoutclient';">logout</button>
+<button><a href={{document.pdfdata.url}}>Download PDF</a></button>
+<button><a href={{document.qrdata.url}}>Download QRdata</a></button>
+<img class=i src="{{document.qrdata.url}}">
+{%endblock%}

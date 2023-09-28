@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Registration Form | CodingLab </title>
+    <link rel="stylesheet" href="{% static 'css/registration.css'%}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Client Data Entry</div>
+    <div class="content">
+      <form action="clientdata" method="post">
+        {%csrf_token%}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name='name' placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" name="address" placeholder="Enter your House Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">District</span>
+            <input type="text" name="district" placeholder="Enter your District" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phone" placeholder="Enter your Phone number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">City</span>
+            <input type="text" name="city" placeholder="Enter your City" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Aadhar Number</span>
+            <input type="text" name="aadhar" placeholder="Enter your Aadhar number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Birth Date</span>
+            <input type="date" name="dob" placeholder="Enter your DOB" required>
+          </div>
+        </div>
+        <!--<div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>!-->
+        
+        <div class="button">
+          <input type="submit" value="Generate QR code & PDF">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

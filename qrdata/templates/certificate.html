@@ -1,0 +1,228 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+</head>
+<body>
+   
+    
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, p { 
+      padding: 0;
+      margin: 0px;
+      outline:none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 18px;
+      color: rgb(10, 1, 1);
+      line-height: 28px;
+      
+      }
+      h1 {
+      font-weight: 800;
+     
+
+      }
+      h4 {
+      margin: 25px 0 5px;
+      }
+      .testbox {
+      /*display: flex;
+      justify-content: center;*/
+      margin-left: 250px;
+      align-items: center;
+      height: inherit;
+      padding: 2px;
+      }
+      .testbox1 {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      height: inherit;
+      padding: 2px;
+      }
+      
+      form {
+      
+      align-items: center;
+      width: 100%;
+      padding: 70px;
+      background: rgb(247, 248, 246);
+      box-shadow: 0 10px 80px rgb(15, 179, 28); 
+      }
+      input {
+      width: auto;
+      margin-right: 15px;
+      vertical-align: middle;
+      }
+      .question-answer label {
+      display: block;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #098447;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      table
+{
+  width: 90%;
+color: black;
+ padding:2px;
+ margin-left:100px;
+ 
+}
+table td
+{
+ font-size:16px;
+ color:black;
+ 
+}
+table th
+{
+ visibility:hidden;
+ display:none;
+}
+input[type="text"]
+{
+ width:100%;
+ height:35px;
+ border:1px solid silver;
+ border-radius:3px;
+ font-size:17px;
+ padding:5px;
+}
+img{
+ height: auto;
+ width: 200px;
+
+}
+ .ddeee{
+
+  width: 100%; 
+  height: auto; 
+  margin-left: 250px;
+  /*float: left;  
+  text-align: right;*/
+  
+
+ }
+ .column1{
+
+text-align: left;
+
+font-size: 16px;
+
+
+ }
+  </style>
+  </head>
+  <body>
+    
+    
+    <!--<div class="testbox">!-->
+      <form action="/" enctype="multipart/form-data">
+        
+        <div class="testbox"><h1>Client Data</h1> </div>
+        <div class="ddeee">{% if clientobj.photo %}
+            <img src="{{clientobj.photo.url}}"   >
+          {% else %}
+            <img src="{% static 'images/img-5.png'%}"  >
+          {% endif %}</div>
+
+       <div class="aligntable">
+            <table   cellspacing="10">
+                
+           <tr>
+            <td class="column1"> Name :</td>
+            <td class="column2">{{clientobj.username}}</td>
+           </tr>
+           <tr>
+            <td class="column1"> E-mail:</td>
+            <td class="column2">{{clientobj.email}}</td>
+           </tr>
+           
+           <tr>
+            <td class="column1">Contact no: </td>
+            <td>{{obj.phone}}</td>
+           </tr>
+           <tr>
+            <td class="column1">Date of Birth: </td>
+            <td>{{obj.dob}}</td>
+           </tr>
+  
+  
+  
+          
+           
+           <tr>
+            <td class="column1">Address: </td>
+            <td>{{obj.address}}</td>
+           </tr>
+  
+           <tr>
+            <td class="column1">City : </td>
+            <td>{{obj.city}} </td>
+           </tr>
+           <tr>
+            <td class="column1">District : </td>
+            <td>{{obj.district}}</td>
+           </tr>
+           <tr>
+            <td class="column1">Aadhar : </td>
+            <td>{{obj.aadhar}}</td>
+           </tr>
+  
+  
+             
+          </table>
+          </div>>
+  
+        </div>
+        
+      
+     
+   
+        
+       
+
+        
+        
+    </div>
+</div>
+  
+
+</body>
+</html>
